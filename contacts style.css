@@ -1,0 +1,52 @@
+.companyTitle {
+    font-family: pacifico;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(37, 99, 235, 255);
+    padding: 15px;
+    margin: 0; /* Reset the negative margin */
+    position: fixed; /* Make it fixed */
+    top: 0; /* Stick it to the top */
+    left: 0; /* Stick it to the left */
+    width: 100%; /* Make it span the entire width */
+    z-index: 1; /* Ensure it stays on top of other elements */
+}
+
+.please-go-above-companyTitle {
+    margin-top: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: abel;
+    font-size: 50px;
+}
+
+p {
+    font-family: abel;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: abel;
+    font-weight: bolder;
+}
