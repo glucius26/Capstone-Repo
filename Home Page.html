@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Assure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Home Style.css"> 
+
+    <style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    .Tomorrow-font {
+        font-family: 'Tomorrow', sans-serif;
+    }
+    .nav-links a:hover {
+        text-decoration: none;
+    }
+    #services .services-grid > div > a:hover { /* Updated selector from .grid to .services-grid */
+        text-decoration: none;
+    }
+    /* Mobile Menu Styles */
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 50;
+        display: none; 
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #mobile-menu.open {
+        display: block;
+        opacity: 1;
+    }
+
+    #mobile-menu .menu-content {
+        background-color: #32485B; 
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        padding: 20px;
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #mobile-menu.open .menu-content {
+        transform: translateX(0); 
+    }
+
+    #mobile-menu .close-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    #mobile-menu .close-btn button {
+        color: #9FC2D9;
+        outline: none;
+    }
+
+    #mobile-menu nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #mobile-menu nav ul li a {
+        display: block;
+        color: #9FC2D9;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #mobile-menu nav ul li a:hover {
+        color: #facc15; 
+    }
+    /* Custom active class for desktop nav tracking */
+    .nav-links a.active {
+        color: var(--color-tan-100) !important; 
+    }
+</style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <img src="images/New logo.png" class="logo-img" >
+            <nav class="desktop-nav nav-links">
+                <ul>
+                    <li><a href="#home" class="Tomorrow-font">Home</a></li>
+                    <li><a href="About%20Us.html" class="Tomorrow-font">About</a></li>
+                    <li><a href="product.html" class="Tomorrow-font">Services</a></li>
+                    <li><a href="contacts.html" class="Tomorrow-font">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="hamburger-btn" aria-lTomorrow="Toggle Navigation">
+                <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hamburger-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div class="menu-content">
+            <div class="close-btn">
+                <button id="close-menu-btn" aria-lTomorrow="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hamburger-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="Tomorrow">Home</a></li>
+                    <li><a href="About%20Us.html" class="Tomorrow-font">About</a></li>
+                    <li><a href="product.html" class="Tomorrow-font">Services</a></li>
+                    <li><a href="contacts.html" class="Tomorrow-font">Calendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="home" class="section">
+            <div class="flex-container">
+                <div class="text-col">
+                    <h2 class="section-title Tomorrow-font" style="font-family: 'Pacifico', sans-serif;">Welcome!</h2>
+                    <p class="welcome-paragraph Tomorrow-font">Welcome to Cryoclear Air! If you're looking for a place to reduce pollution in a more effective, more positive manner, you're in the right place!</p>
+                </div>
+                <div class="img-col">
+                    <img src="images/Factory6.jpg" alt="Home Image" class="home-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="flex-container">
+                <div class="img-col">
+                    <img src="images/Factory2.jpg" alt="Home Image" class="home-image">
+                </div>
+                <div class="text-col">
+                    <h2 class="section-title Tomorrow-font" style="font-family: 'Pacifico', sans-serif;">About Cryoclear Air</h2>
+                    <p class="welcome-paragraph Tomorrow-font">Cryoclear Air is a company dedicated to developing a healthier and more constructive method of reducing air pollutants from factories.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="section-title services-title Tomorrow-font" style="font-family: 'Pacifico', sans-serif;">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <a href="FAQ%20Home.html" class="tommorow-font">FAQ</a>
+                    <p class="Tomorrow-font">View frequently asked questions.</p>
+                </div>
+                <div class="service-card">
+                    <a href="Reviews.html" class="Tomorrow-font">Testimonials</a>
+                    <p class="Tomorrow-font">Read reviews from real people who have tried our product!</p>
+                </div>
+                <div class="service-card">
+                    <a href="BlogNews.html" class="Tomorrow-font">Calendar</a>
+                    <p class="Tomorrow-font">Look at our schedule!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-text">
+            <p class="Tomorrow-font">&copy; 2025 Cryoclear Air All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileMenuLinks = mobileMenu.querySelectorAll("#mobile-menu nav ul li a");
+    const desktopNavLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
+
+    let menuOpen = false; 
+
+    function openMobileMenu() {
+        mobileMenu.style.display = 'block';
+        setTimeout(() => { 
+            mobileMenu.style.opacity = '1';
+            mobileMenu.querySelector('.menu-content').style.transform = 'translateX(0)';
+            menuOpen = true; 
+        }, 10);
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        hamburgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />`;
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.style.opacity = '0';
+        mobileMenu.querySelector('.menu-content').style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            mobileMenu.style.display = 'none';
+            menuOpen = false; 
+        }, 300); 
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        hamburgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />`;
+    }
+
+    hamburgerBtn.addEventListener("click", () => {
+        if (!menuOpen) {
+            openMobileMenu();
+        } else {
+            closeMobileMenu();
+        }
+    });
+
+    closeMenuBtn.addEventListener("click", closeMobileMenu);
+
+ 
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            const href = this.getAttribute('href');
+            console.log("Mobile link clicked:", this);
+            console.log("Mobile link href:", href);
+
+            if (href !== "#home" && href.startsWith("#")) {
+                event.preventDefault();
+                console.log("In-page link detected:", href);
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    console.log("Scrolling to:", targetElement.id);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(closeMobileMenu, 50); 
+                } else {
+                    console.log("Target element NOT found:", targetId);
+                    setTimeout(closeMobileMenu, 50); 
+                }
+            } else if (href !== "#") {
+                console.log("External/relative link detected:", href);
+                window.location.href = href;
+                console.log("window.location.href set to:", window.location.href);
+            } else {
+                console.log("Href is '#', doing nothing.");
+                setTimeout(closeMobileMenu, 50); 
+            }
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (menuOpen && !mobileMenu.querySelector('.menu-content').contains(event.target) && event.target !== hamburgerBtn) {
+            closeMobileMenu();
+        }
+    });
+
+    function updateActiveNavLink() {
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        desktopNavLinks.forEach(link => { 
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNavLink);
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* About Us Style.css */
+.companyTitleLink {
+    text-decoration: none; /* Remove default link underline */
+}
+
+.companyTitle {
+    font-family: pacifico;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(37, 99, 235, 255);
+    padding: 15px;
+    margin: -7.6px;
+    display: block; /* Make it a block-level element to fill the width */
+    text-align: left; /* Align the text to the left */
+    text-decoration: underline;
+}
+
+.companyTitle:hover {
+    /* Add any hover effects if you like */
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add some padding around the container */
+}
+
+.team-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: abel;
+    font-size: 30px;
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow team members to wrap to the next line on smaller screens */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px; /* Reduce margin for better flow on smaller screens */
+}
+
+.picture-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    overflow: hidden;
+}
+
+.picture-placeholder img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the placeholder without distorting */
+}
+
+.tanZone-box {
+    background-color: rgba(238,238,238,255); /* Tan color */
+    border: 1px solid #d2b48c; /* Darker tan border */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #8b4513; /* Brown text color */
+    width: 150px; /* Adjust width as needed */
+}
+
+.tanZone-box h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.tanZone-box p {
+    margin-top: 0;
+    font-size: 0.9em;
+}
+
+body {
+    background-color: white;
+    margin: 0; /* Reset default body margin */
+}
+
+.jamelle {
+    width: inherit;
+    height: inherit;
+}
+
+.cooper {
+    width: inherit;
+    height: inherit;
+}
+
+.adam {
+    width: inherit;
+    height: inherit;
+}
+
+.griffin {
+    width: inherit;
+    height: inherit;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* Remove underline from links inside company title */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        margin: 20px 0;
+    }
+
+    .picture-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tanZone-box {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .companyTitle {
+        font-size: 24px;
+        padding: 10px;
+        text-align: center; /* Center the title on smaller screens */
+    }
+
+    .team-info h1 {
+        font-size: 2em;
+    }
+
+    .team-info h4 {
+        font-size: 1.1em;
+    }
+
+    .picture-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tanZone-box h3 {
+        font-size: 1em;
+    }
+
+    .tanZone-box p {
+        font-size: 0.85em;
+    }
+}

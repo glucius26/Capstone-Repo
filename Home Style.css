@@ -1,0 +1,299 @@
+/* style.css */
+
+/* Define custom colors and sizes based on Tailwind classes used in the HTML */
+:root {
+    /* Colors */
+    --color-primary-dark: #273140; /* bg-[#273140] */
+    --color-light-blue: #9FC2D9; /* text-[#9FC2D9], border-[#9FC2D9] */
+    --color-background: #DFEDF3; /* bg-[#DFEDF3] */
+    --color-dark-blue-alt: #32485B; /* bg-[#32485B], text-[#32485B] */
+    --color-gray-700: #4b5563; /* text-gray-700 */
+    --color-slate-500: #64748b; /* text-slate-500 */
+    --color-yellow-alt: #facc15; /* hover color in mobile menu */
+}
+
+/* BASE STYLES & LAYOUT */
+body {
+    background-color: var(--color-background); /* bg-[#DFEDF3] */
+}
+
+.container {
+    max-width: 1280px; /* Standard container sizing, adjust as needed */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+
+/* HEADER */
+.main-header {
+    background-color: var(--color-primary-dark); /* bg-[#273140] */
+    color: var(--color-light-blue); /* text-[#9FC2D9] */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+}
+
+@media (min-width: 768px) {
+    .main-header {
+        padding-top: 1.5rem; /* md:py-6 */
+        padding-bottom: 1.5rem; /* md:py-6 */
+    }
+}
+
+.header-inner {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+}
+
+.logo-img {
+    
+    max-width: 300px; /* max-w-xs (using max-w-xs from Tailwind scale, which might be too small, adjust as needed) */
+    max-height: 300px; /* max-h-xs */
+}
+
+/* DESKTOP NAVIGATION */
+.desktop-nav {
+    display: none; /* hidden */
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: block; /* md:block */
+    }
+}
+
+.desktop-nav ul {
+    display: flex; /* flex */
+    gap: 1rem; /* space-x-4 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-nav a {
+    color: var(--color-light-blue);
+    font-size: 1.5rem; /* text-2xl */
+    text-decoration: underline; /* text-decoration: underline */
+    transition: color 300ms ease; /* transition duration-300 */
+}
+
+.desktop-nav a:hover {
+    color: var(--color-tan-100); /* hover:text-tan-100 */
+}
+
+/* HAMBURGER BUTTON (Mobile) */
+.hamburger-btn {
+    display: block; /* default on mobile */
+    color: var(--color-light-blue); /* text-[#9FC2D9] */
+    outline: none; /* focus:outline-none */
+}
+
+@media (min-width: 768px) {
+    .hamburger-btn {
+        display: none; /* md:hidden */
+    }
+}
+
+.hamburger-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+}
+
+/* MOBILE MENU (Override styles already in <style> block, only for utility classes) */
+#mobile-menu {
+    background-color: rgba(37, 99, 235, 0.9); /* bg-blue-600 bg-opacity-90 */
+}
+
+#mobile-menu .menu-content {
+    background-color: var(--color-dark-blue-alt); /* bg-[#32485B] (Note: The Tailwind was using blue-600 bg-opacity-90 on the parent, but the internal menu kept the original bg-[#32485B]) */
+}
+
+#mobile-menu .close-btn {
+    display: flex; /* flex */
+    justify-content: flex-end; /* justify-end */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+#mobile-menu .close-btn button {
+    color: #ffffff; /* text-white */
+    outline: none; /* focus:outline-none */
+}
+
+#mobile-menu nav ul {
+    gap: 1rem; /* space-y-4 (converted to gap for flex-direction: column) */
+}
+
+#mobile-menu nav ul li a {
+    display: block; /* block */
+    font-size: 1.125rem; /* text-lg */
+    color: #ffffff; /* text-white */
+    transition: color 300ms ease; /* transition duration-300 */
+}
+
+#mobile-menu nav ul li a:hover {
+    color: var(--color-tan-100); /* hover:text-tan-100 */
+}
+
+/* MAIN CONTENT */
+main {
+    padding-top: 2rem; /* py-8 */
+    padding-bottom: 2rem; /* py-8 */
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-top: 2.5rem; /* md:py-10 */
+        padding-bottom: 2.5rem; /* md:py-10 */
+    }
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 4rem; /* mb-16 */
+}
+
+@media (min-width: 768px) {
+    .section {
+        margin-bottom: 5rem; /* md:mb-20 */
+    }
+}
+
+/* HOME/ABOUT SECTIONS LAYOUT */
+.flex-container {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+    gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+.text-col {
+    width: 100%;
+    text-align: center; /* text-center */
+}
+
+@media (min-width: 768px) {
+    .text-col {
+        width: 50%; /* md:w-1/2 */
+        text-align: left; /* md:text-left */
+    }
+}
+
+.img-col {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .img-col {
+        width: 50%; /* md:w-1/2 */
+    }
+}
+
+.section-title {
+    font-size: 1.875rem; /* text-3xl */
+    color: var(--color-dark-blue-alt); /* text-[#32485B] */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.25rem; /* md:text-4xl */
+    }
+}
+
+.welcome-paragraph {
+    color: var(--color-gray-700); /* text-gray-700 */
+    font-size: 1.875rem; /* text-3xl */
+}
+
+.home-image {
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    width: 100%; /* w-full */
+    max-width: 28rem; /* max-w-xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ABOUT SECTION specific styles */
+#about {
+    background-color: var(--color-tan-100); /* bg-tan-100 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+}
+
+@media (min-width: 768px) {
+    #about {
+        padding: 2rem; /* md:p-8 */
+    }
+}
+
+/* SERVICES SECTION */
+.services-title {
+    text-align: center; /* text-center */
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+.services-grid {
+    display: grid; /* grid */
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+    }
+}
+
+.service-card {
+    background-color: var(--color-primary-dark); /* bg-[#273140] */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); /* shadow-md */
+    padding: 1.5rem; /* p-6 */
+    text-align: center; /* text-center */
+    transition: box-shadow 300ms ease; /* transition duration-300 */
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+}
+
+.service-card a {
+    font-size: 1.875rem; /* text-3xl */
+    color: var(--color-light-blue); /* text-[#9FC2D9] */
+    margin-bottom: 0.5rem; /* mb-2 */
+    cursor: pointer; /* cursor-pointer */
+    text-decoration: underline; /* text-decoration: underline */
+}
+
+.service-card p {
+    color: var(--color-background); /* text-[#DFEDF3] */
+    font-size: 1.25rem; /* text-xl */
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--color-dark-blue-alt); /* bg-[#32485B] */
+    color: #ffffff; /* text-white */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+    margin-top: 3rem; /* mt-12 */
+}
+
+.footer-text {
+    text-align: center; /* text-center */
+}

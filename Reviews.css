@@ -1,0 +1,73 @@
+        .companyTitle {
+            font-family: pacifico;
+            font-weight: normal;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(37, 99, 235, 255);
+            padding: 15px;
+            margin: 0; /* Reset the negative margin */
+            position: fixed; /* Make it fixed */
+            top: 0; /* Stick it to the top */
+            left: 0; /* Stick it to the left */
+            width: 100%; /* Make it span the entire width */
+            z-index: 1; /* Ensure it stays on top of other elements */
+            text-align: left; /* Center the title */
+        }
+
+        .please-go-above-companyTitle {
+            margin-top: 80px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Abel', sans-serif;
+            color: #333;
+            margin: 0;
+            padding-top: 60px; /* Adjust padding for fixed header */
+        }
+
+        .review-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 700px;
+            box-sizing: border-box;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+            font-family: abel;
+        }
+
+        .review-text {
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-family: abel;
+        }
+
+        .rating {
+            color: gold;
+            font-size: 1.2em;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgba(37, 99, 235, 255);
+        }
+
+        a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
