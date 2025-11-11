@@ -1,5 +1,5 @@
 .companyTitle {
-    font-family: pacifico;
+    font-family: Tommorow;
     font-weight: normal;
     font-size: 30px;
     color: white;
@@ -10,7 +10,13 @@
     top: 0; /* Stick it to the top */
     left: 0; /* Stick it to the left */
     width: 100%; /* Make it span the entire width */
-    z-index: 1; /* Ensure it stays on top of other elements */
+    
+}
+
+.logo-img {
+    
+    max-width: 300px; 
+    max-height: 300px; 
 }
 
 .please-go-above-companyTitle {
