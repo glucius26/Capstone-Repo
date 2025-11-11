@@ -21,9 +21,6 @@ body {
 .nav-links a:hover {
     text-decoration: none;
 }
-#services .services-grid > div > a:hover { /* Updated selector from .grid to .services-grid */
-    text-decoration: none;
-}
 /* Mobile Menu Styles */
 #mobile-menu {
     position: fixed;
