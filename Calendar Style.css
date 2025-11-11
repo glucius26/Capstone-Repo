@@ -13,12 +13,6 @@
     
 }
 
-h1 {
-    font-size: 50px;
-    font-family: "Tomorrow";
-    margin-top: 80px;
-}
-
 .logo-img {
     
     max-width: 300px; 
@@ -26,7 +20,11 @@ h1 {
 }
 
 .please-go-above-companyTitle {
-    margin-top: 80px;
+    margin-top: 140px;
+    font-family: "Tomorrow";
+    color: #32485B;
+    justify-self: center;
+    text-align: center;
 }
 body {
     background-color: #dfedf3;
