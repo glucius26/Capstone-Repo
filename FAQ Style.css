@@ -1,32 +1,41 @@
 .companyTitle {
-    font-family: pacifico;
+    font-family: Tommorow;
     font-weight: normal;
     font-size: 30px;
     color: white;
-    background-color: rgba(37, 99, 235, 255);
+    background-color: #273140;
     padding: 15px;
-    margin: 0; /* Reset the negative margin */
+    margin: 0; 
     position: fixed; /* Make it fixed */
     top: 0; /* Stick it to the top */
     left: 0; /* Stick it to the left */
-    width: 100%; /* Make it span the entire width */
-    z-index: 1; /* Ensure it stays on top of other elements */
+    width: 100%; 
+    
+}
+
+.logo-img {
+    
+    max-width: 300px; 
+    max-height: 300px; 
 }
 
 .please-go-above-companyTitle {
-    margin-top: 80px;
+    margin-top: 150px;
+    font-family: "Tomorrow";
 }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #DFEDF3;
+            font-family: "Tomorrow";
         }
 
         .team-info {
             text-align: center;
             margin-bottom: 30px;
-            font-family: abel;
+            font-family: "Tomorrow";
             font-size: 30px;
         }
 
@@ -70,6 +79,7 @@
     margin-top: auto;
     margin-bottom: auto;
     text-align: left;
+    font-family: "Tomorrow";
 }
 
 .answer {
@@ -77,6 +87,7 @@
     margin-bottom: 50px;
     text-align: left;
     color: lightslategrey;
+    font-family: "Tomorrow";
 }
 
 a {
@@ -86,4 +97,12 @@ a {
 a:hover {
     text-decoration: none;
     cursor: pointer;
+}
+
+body {
+    background-color: #DFEDF3;
+}
+
+.faq-container{
+    font-family: "Tomorrow";
 }
