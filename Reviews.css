@@ -1,33 +1,38 @@
-        .companyTitle {
-            font-family: pacifico;
-            font-weight: normal;
-            font-size: 30px;
-            color: white;
-            background-color: rgba(37, 99, 235, 255);
-            padding: 15px;
-            margin: 0; /* Reset the negative margin */
-            position: fixed; /* Make it fixed */
-            top: 0; /* Stick it to the top */
-            left: 0; /* Stick it to the left */
-            width: 100%; /* Make it span the entire width */
-            z-index: 1; /* Ensure it stays on top of other elements */
-            text-align: left; /* Center the title */
-        }
+.companyTitle {
+    font-family: Tommorow;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    background-color: #273140;
+    padding: 15px;
+    margin: 0; 
+    position: fixed; /* Make it fixed */
+    top: 0; /* Stick it to the top */
+    left: 0; /* Stick it to the left */
+    width: 100%; 
+}
 
-        .please-go-above-companyTitle {
-            margin-top: 80px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+.logo-img {
+    
+    max-width: 300px; 
+    max-height: 300px; 
+}
+.please-go-above-companyTitle {
+    margin-top: 150px;
+    font-family: "Tomorrow";
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DFEDF3;
+    font-family: "Tomorrow";
+    margin-top: 85px;
+}
 
         body {
             background-color: #f4f4f4;
-            font-family: 'Abel', sans-serif;
+            font-family: 'Tomorrow', sans-serif;
             color: #333;
             margin: 0;
             padding-top: 60px; /* Adjust padding for fixed header */
@@ -48,13 +53,13 @@
             font-weight: bold;
             margin-bottom: 5px;
             color: #555;
-            font-family: abel;
+            font-family: Tomorrow;
         }
 
         .review-text {
             line-height: 1.6;
             margin-bottom: 10px;
-            font-family: abel;
+            font-family: Tomorrow;
         }
 
         .rating {
